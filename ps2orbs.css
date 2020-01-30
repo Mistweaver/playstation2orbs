@@ -1,0 +1,116 @@
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+
+
+#orbit-container {
+    position: relative;
+    top: 25px;
+    left: 25px;
+    height: 300px;
+    width: 300px;
+}
+
+#orbit-plane-1 {
+    position: relative;
+    /*top: 25px;
+    left: 25px;*/
+    height: 200px;
+    width: 200px;
+    -webkit-animation: orbit-animation 7s linear infinite;
+    animation: orbit-animation 7s linear infinite;
+}
+
+/* ----------- Orbs ------------ */
+.orb {
+    position: absolute;
+    top: -17px;
+    left: 125px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    /*background-color: #00FFCA;*/
+    background-color: white;
+    animation: neonGlow 2s infinite alternate cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+/* ---------- Orbit Path -------- */
+.orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 294px;
+    height: 294px;
+    border-radius: 100%;
+    
+}
+
+#orbit1 {
+    -webkit-animation: orbit-animation 5s linear infinite;
+    animation: orbit-animation 5s linear infinite;
+}
+#orbit2 {
+    -webkit-animation: orbit-animation 6s linear infinite;
+    animation: orbit-animation 6s linear infinite;
+}
+#orbit3 {
+    -webkit-animation: orbit-animation 7.5s linear infinite;
+    animation: orbit-animation 7.5s linear infinite;
+}
+#orbit4 {
+    -webkit-animation: orbit-animation 8s linear infinite;
+    animation: orbit-animation 8s linear infinite;
+}
+#orbit5 {
+    -webkit-animation: orbit-animation 9s linear infinite;
+    animation: orbit-animation 9s linear infinite;
+}
+#orbit6 {
+    -webkit-animation: orbit-animation 9.5s linear infinite;
+    animation: orbit-animation 9.5s linear infinite;
+}
+#orbit7 {
+    -webkit-animation: orbit-animation 10s linear infinite;
+    animation: orbit-animation 10s linear infinite;
+}
+
+/* ---------- Animations ---------- */
+@-webkit-keyframes orbit-animation {
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+      
+    }
+}
+
+/*Courtesy of Val Head https://codepen.io/valhead/pen/djHoD*/
+@keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 10px rgba(255,255,255,.8),
+                   0 0 20px rgba(255,255,255,.8),
+                   0 0 22px  rgba(255,255,255,.8),
+                   0 0 40px  rgba(66,220,219,.8),
+                   0 0 60px  rgba(66,220,219,.8),
+                   0 0 80px  rgba(66,220,219,.5),
+                   0 0 100px rgba(66,220,219,.5),
+                   0 0 140px rgba(66,220,219,.5),
+                   0 0 200px rgba(66,220,219,.5);
+    }
+    100% {
+      box-shadow: 0 0 2px rgba(255,255,255,.8),
+                   0 0 8px rgba(255,255,255,.8),
+                   0 0 10px rgba(255,255,255,.8),
+                   0 0 20px rgba(66,220,219,.8),
+                   0 0 30px rgba(66,220,219,.8),
+                   0 0 40px rgba(66,220,219,.8),
+                   0 0 50px rgba(66,220,219,.5),
+                   0 0 80px rgba(66,220,219,.5);
+    }
+  }
